@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title> Latihan Class & Object </title>
+    </head>
+    <body>
+        
+        <form onsubmit="return false">
+            <table>
+                <tr>
+                    <td></td>
+                    <td colspan="3">
+                        <h3> Informasi Hewan</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hewan 1</td>
+                    <td>:</td>
+                    <td>
+                        <input type="text" id="hewan1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hewan 2</td>
+                    <td>:</td>
+                    <td>
+                        <input type="text" id="hewan2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hewan 3</td>
+                    <td>:</td>
+                    <td>
+                        <input type="text" id="hewan3">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><br><br></td>
+                    <td colspan="2">
+                        <button onclick="search()">
+                            Klik
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <script>
+        function search() {
+            let ex1 = document.getElementById("hewan1").value;
+            let ex2 = document.getElementById("hewan2").value;
+            let ex3 =  document.getElementById("hewan3").value;
+
+            class Hewan {
+                jenismakanan;
+                jumlahkaki;
+                hewan1;
+                hewan2;
+                hewan3;
+
+
+                constructor(jenismakanan, jumlahkaki, hewan1, hewan2, hewan3) {
+                    this.jenismakanan= "Karnivora";
+                    this.jumlahkaki= "4";
+                    this.hewan1= ex1;
+                    this.hewan2= ex2;
+                    this.hewan3= ex3;
+                }
+                
+                bernafas() {
+                    return "hewan ini bisa bernafas";
+                }
+                bergerak() {
+                    return "hewan ini bisa bergerak";
+                }
+                berkembangbiak() {
+                    return "hewan ini bisa berkembangbiak";
+                }
+
+            }
+
+            let singa = new Hewan;
+            let serigala = new Hewan;
+            let buaya = new Hewan;
+
+            console.log(singa.hewan1);
+            console.log(singa.jenismakanan);
+            console.log(singa.jumlahkaki);
+            console.log(singa.bernafas());
+            console.log(singa.bergerak());
+
+            console.log(serigala.hewan2);
+            console.log(serigala.jenismakanan);
+            console.log(serigala.jumlahkaki);
+            console.log(serigala.bergerak());
+            console.log(serigala.berkembangbiak());
+
+            console.log(buaya.hewan3);
+            console.log(buaya.jenismakanan);
+            console.log(buaya.jumlahkaki);
+            console.log(buaya.bernafas());
+            console.log(buaya.berkembangbiak());
+        }
+        </script>
+    </body>
+</html>
